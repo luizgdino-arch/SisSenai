@@ -51,4 +51,8 @@
   fetch('/listar-clientes')
       .then(res=>res.json())
       .then(clientes=>{
-
+const corpoTabela= documentos.getElementByld('lista-clientes')
+clientes.forEach(c=>{
+  corpoTabela.innerHTML+='
+   <tr>
+   <td>

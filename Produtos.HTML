@@ -1,4 +1,72 @@
 <!DOCTYPE html>
-<html lang= "pt-br">
+<html lang="pt-br">
 <head>
-   <meta char
+  <meta charset="UTF-8">
+  <link rel="styleshhet" href="estilo.css">
+  <link rel="SisSenai- Cadastro de clientes</title>
+</head>
+</body>
+   <nav>
+  <a href"index.html">Home</a>
+  <a href="clientes.html">Clientes</a>
+  <a href="produtos.html">Produtos</a>
+  <a href="vendas.html">Vendas</as>
+             <a href="consulta_vendas.html">Consulta Vendas.html">consulta Vendas</a>
+  </nav>
+
+  <header class="banner">
+   <h1>Gestão de clientes</h1>
+   <p>Cadastre e gerencie sua base de contatos</p>
+</header>
+
+<div class="container".
+   <div class="card">
+      <h2>Novo Cadastro</h2>
+      <form action="card">
+      <form action='/salvar-cliente" method="POST">
+         <input types="text" name="nome placeholder="Nome do cliente" required>
+         <input types="text" name="cpf" placeholder="CPF/CNPJ" required>
+         <input types="tel" name="telefone" placeholder="Telefone" required>
+        <buton type"=submit">Salvar Cliente</button>
+ </form>
+</div>
+
+<div class="card" style="margin-top: 20px;">
+   <h2>Clientes Cadastro</h2>
+   <table>
+     <thead>
+        <tr>
+          <th>Nome</th>
+          <th>CPF/CNPJ</th>
+           <th>Telefone</th>
+         </tr>
+      </thead>
+      </tbody id="lista-clientes">
+      </tdbody>
+    </table>
+  </div>
+</div>
+
+<script>
+  fetch('/listar-clientes')
+      .then(res=>res.json())
+      .then(clientes=>{
+const corpoTabela= documentos.getElementByld('lista-clientes')
+clientes.forEach(c=>{
+  corpoTabela.innerHTML+='
+   <tr>
+   <td>${c.nome}</td>
+   <td>${c.cpf}</td>
+   <td>${c.telefone}</td>
+  </tr>';
+});
+});
+</scipt>
+</body>
+<footer class="rodape">
+  <div class="container-"rodape"
+   <p>&copy;2026SisSenai-Sistema de Gestão Educacional</p>
+   <p>Desenvolvido para fins didáticos-Unidade SENAI Capanema/PR</p>
+  </div>
+</footer>
+<html>

@@ -24,4 +24,31 @@
       <h2>Novo Cadastro</h2>
       <form action="card">
       <form action='/salvar-cliente" method="POST">
-         input types
+         <input types="text" name="nome placeholder="Nome do cliente" required>
+         <input types="text" name="cpf" placeholder="CPF/CNPJ" required>
+         <input types="tel" name="telefone" placeholder="Telefone" required>
+        <buton type"=submit">Salvar Cliente</button>
+ </form>
+</div>
+
+<div class="card" style="margin-top: 20px;">
+   <h2>Clientes Cadastro</h2>
+   <table>
+     <thead>
+        <tr>
+          <th>Nome</th>
+          <th>CPF/CNPJ</th>
+           <th>Telefone</th>
+         </tr>
+      </thead>
+      </tbody id="lista-clientes">
+      </tdbody>
+    </table>
+  </div>
+</div>
+
+<script>
+  fetch('/listar-clientes')
+      .then(res=>res.json())
+      .then(clientes=>{
+

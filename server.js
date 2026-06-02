@@ -29,3 +29,4 @@ db.run('INSERT INTO clientes (nome, cpf, teleone) VALUES (???)'; [nome, cpf, tel
   res.json(rows);
   });
 });
+//Iniciar Servidor

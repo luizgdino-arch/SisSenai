@@ -65,7 +65,20 @@ app.get('/listar-clientes', (req, res) => {
         res.json(rows);
     });
 });
+const { id } =req.parms;
+const{ nome, cpf, telefone} =req.body;
+const sql= `UPDATE clientesSETnome=?, cpf=?,telefone=?WHERE id=?`;
 
+db.run(sql, [nome,cpf,telefone,id],(err)=> {
+	if (err) return res.status(500).json({error: err.menssage});
+	res.json({sucess:true});
+  });
+});
+app.delete('/excluir-cliente/:id',(req,res)=> {
+	if (err) return res.status(500).json({ error:err.menssage});
+    res.json({success:true});
+   });
+});
 // --- ROTAS DE PRODUTOS (ESTOQUE) ---
 app.post('/salvar-produto', (req, res) => {
     const { descricao, preco, estoque } = req.body;
